@@ -1,3 +1,8 @@
+load 'lib/artist.rb'
+load 'lib/song.rb'
+load 'lib/genre.rb'
+
+
 def test(title, &b)
   begin
     if b
@@ -58,7 +63,7 @@ end
 test 'The Artist class can reset the artists that have been created' do
   assert Artist.reset_artists
   assert_equal Artist.count, 0
-end
+end #all.clear
 
 test 'The Artist class can keep track of artists as they are created' do
   Artist.reset_artists
